@@ -1,0 +1,23 @@
+# This is a template for your configuration file for the server to run correctly.
+# Rename this file from "config_template" to "config" to be automatically picked up by the server.
+# Any line starting with a pound file will be ignore by the server while parsing this config file.
+# All configuration values need to follow the format:
+#  key=value
+
+# All keys and values ARE case sensitive
+# Order of the key value pair matters. Values that appear later in the file for the same key will have a higher precedence
+# No comments will be accepted on the same line as a key/value pair
+
+# Uncomment the following lines and fill in the required information:
+# mysql_db.hostname=
+# mysql_db.user=
+# mysql_db.pass=<base64 encoded mysql database password>
+# mysql_db.dbname=
+#
+# user.username.minlength=<number of characters required in the username>
+# user.password.minlength=<number of characters required in the password>
+# user.logintoken.validity=<seconds each login token is suppose to be valid for>
+# user.logintoken.max_duration_renewal=<seconds before expiry the token can be renewed>
+
+# Optional key/value pairs
+# logger_output=true/false
