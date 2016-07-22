@@ -3,6 +3,8 @@
 This is the server component for the application, LocNotes, which is posted [here](https://github.com/akshitsoota/LocNotes).
 This web server is completely written in Python and is meant to be run on an Amazon Web Services Elastic Cloud Compute (AWS EC2) Server.
 
+The entire documentation provides information pertaining to an AWS EC2 instance running Amazon Linux AMI 2016.03.3.
+
 ### How to setup the backend and have it running?
 
 * SSH into your AWS EC2 instance using a command similar to:
