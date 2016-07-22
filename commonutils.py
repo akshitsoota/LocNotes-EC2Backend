@@ -9,7 +9,7 @@ import sys, getopt
 
 # Logger function
 def log(output):
-	if ( "logger.output" not in env_var ) or ( "logger.output" in env_var and env_var["logger_output"] == "true" ):
+	if ( "logger_output" not in env_var ) or ( "logger_output" in env_var and env_var["logger_output"] == "true" ):
 		# By default, we will output
 		print("{0}: {1}".format(str(datetime.now()), output))
 
