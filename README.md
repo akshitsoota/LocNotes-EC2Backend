@@ -1,5 +1,8 @@
 # LocNotes - Smarter Travel Logs
 
+![Python 2.7.10](https://img.shields.io/badge/python-2.7.10-brightgreen.svg)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 This is the server component for the application, LocNotes, which is posted [here](https://github.com/akshitsoota/LocNotes).
 This web server is completely written in Python and is meant to be run on an Amazon Web Services Elastic Cloud Compute (AWS EC2) Server.
 
@@ -200,3 +203,13 @@ LocNotes app after a fresh install and a refresh location logs action or a logou
 
 Change character sets used throughout the database and LocNotes application to `utf8mb4`. A good StackOverflow Question to address this problem
 can be found [here](http://stackoverflow.com/questions/7814293/how-to-insert-utf-8-mb4-characteremoji-in-ios5-in-mysql).
+
+* Lack of SSL - A few of the server endpoints require `Basic Authentication` to authenticate the user. However, as the server doesn't
+currently doesn't support traffic over SSL, the contents of the `Basic Authentication` header are transferred unencrypted over the 
+internet. This makes it easy for a man-in-the-middle to sniff off the `Authentication` header, run `base64_decode` and extract the user's
+username and login token. This theoretically gives the man-in-the-middle **full** access to the user's location logs and account.
+
+**Potential Fix**:
+
+Spawn a server which listens over port `443` instead of port `80` and have the server serve a self-signed certificate to prove its
+identity.
